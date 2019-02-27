@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta id="extViewportMeta" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700%7CLora:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="css/intlTelInput.css" />
+    <link rel="stylesheet" href="css/icofont.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/vee-validate.min.js"></script>
+    <script src="js/vue-resource1.3.4.js"></script>
+    <script src="js/vue-spinner.min.js"></script>
+
+
+    
+ <meta name="title" content="">
+ <meta name="description" content="" />
+ <meta name="keywords" content="">
+
+ <title> Shopping Mall </title>
+
+ <meta property="og:site_name" content="">
+ <meta property="og:title" content="">
+
+ <meta name="twitter:site" content="" />
+ <meta name="twitter:title" content="" />
+
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="media/lulukochilogo.png">
+<meta property="og:url" content="">
+<meta property="twitter:description" content="">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="">
+<meta property="twitter:type" content="website">
+<meta property="twitter:image" content="media/lulukochilogo.png" />
+</head>
+<body>
+    <div class="wrapper">
+
+
+    <!--notification-->
+    <!--<div class="notification hidden-xs alert alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><img src="/Assets/LuluKochi/images/close.svg" alt="X" /></button>
+        <div class="sp-notifications">
+                <div class="item">
+                    <a href="/kochi/offers/" target="_blank">
+                        <img src="/media/6382/womens-wednesday_colorbar.jpg?anchor=center&amp;mode=crop&amp;width=260&amp;height=190&amp;rnd=131937418860000000"  alt="Colorbar">
+                        <div class="notifyText">
+                            <div class="eventDateCat">
+                                <p class="category">Ongoing</p>
+
+                            </div>
+                            <h5>Free Makeover and exciting offers</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="/kochi/offers/" target="_blank">
+                        <img src="/media/6384/womens-wednesday_bipha-ayurveda.jpg?anchor=center&amp;mode=crop&amp;width=260&amp;height=190&amp;rnd=131937419470000000"  alt="Bipha Ayurveda">
+                        <div class="notifyText">
+                            <div class="eventDateCat">
+                                <p class="category">Ongoing</p>
+
+                            </div>
+                            <h5>10% off on all products.</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="/kochi/offers/" target="_blank">
+                        <img src="/media/6409/tasty-tuesday-offers-1.jpg?anchor=center&amp;mode=crop&amp;width=260&amp;height=190&amp;rnd=131937417580000000"  alt="Tasty Tuesday Offers (2)">
+                        <div class="notifyText">
+                            <div class="eventDateCat">
+                                <p class="category">Ongoing</p>
+
+                            </div>
+                            <h5>Get unlimited offers on food every Tuesday</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="/kochi/offers/" target="_blank">
+                        <img src="/media/6411/tasty-tuesday-offers-2.jpg?anchor=center&amp;mode=crop&amp;width=260&amp;height=190&amp;rnd=131937418250000000"  alt="Tasty Tuesday Offers (3)">
+                        <div class="notifyText">
+                            <div class="eventDateCat">
+                                <p class="category">Ongoing</p>
+
+                            </div>
+                            <h5>Get unlimited offers on food every Tuesday</h5>
+                        </div>
+                    </a>
+                </div>
+        </div>
+    </div>
+-->
+
+        
+
+<!--header new-->
+
+<header>
+    <a class="logo" href="">
+        <img src="media/lulukochilogo.png" alt="" class="img-responsive" />
+    </a>
+    <ul class="main-nav hidden-sm hidden-xs">
+            <li>
+                <a href="">Shop</a>
+            </li>
+            <li>
+                <a href="">Dine</a>
+            </li>
+            <li>
+                <a href="">Entertain</a>
+            </li>
+            <li>
+                <a href="">Events</a>
+            </li>
+            <li>
+                <a href="">Offers</a>
+            </li>
+            <li>
+                <a href="">Services</a>
+            </li>
+            <li>
+                <a href="">Movies</a>
+            </li>
+
+    </ul>
+
+
+
+    <form id="searchform" action="." onsubmit="event.preventDefault();searchResult()">
+
+        <div class="search-container searchBar">
+            <div class="container">
+                <button class="close-search close-search-btn" title="Close Search" type="button"><i class="icofont-close-line"></i></button>
+                <input type="search" id="searchInput" placeholder="Search here" autocomplete="off" onkeydown="JavaScript: if (event.keyCode == 13) searchResult();" class="search-input" autofocus>
+            </div>
+        </div>
+        <button class="search-trigger search-submit" type="button" id="searchsubmit"><i class="icofont-search-1"></i></button>
+    </form>
+
+        
+</header>
+<div class="burger"> <span></span> </div>
+<nav>
+    <ul class="main">
+            <li class="hidden-lg hidden-md">
+                <a href="">Shop</a>
+            </li>
+            <li class="hidden-lg hidden-md">
+                <a href="">Dine</a>
+            </li>
+            <li class="hidden-lg hidden-md">
+                <a href="">Entertain</a>
+            </li>
+            <li class="hidden-lg hidden-md">
+                <a href="">Events</a>
+            </li>
+            <li class="hidden-lg hidden-md">
+                <a href="">Offers</a>
+            </li>
+            <li class="hidden-lg hidden-md">
+                <a href="">Services</a>
+            </li>
+            <li class="hidden-lg hidden-md">
+                <a href="">Movies</a>
+            </li>
+                    <li> <a href="">About Us</a> </li>
+            
+            <li> <a href="">Loyalty and Rewards</a> </li>
+            <li> <a href="">E Magazine</a> </li>
+            <li> <a href="">Services</a> </li>
+            <li> <a href="">Gallery</a> </li>
+            <li> <a href="">Floor Plan</a> </li>
+            <li> <a href="">Careers</a> </li>
+            <li> <a href="">Contact Us</a> </li>
+
+    </ul>
+    <span class="follow">Follow us</span>
+        <ul class="social">
+                <li><a href="" target="_blank"><i class="icofont-facebook"></i></a></li>
+                <li><a href="" target="_blank"><i class="icofont-twitter"></i></a></li>
+                <li><a href="" target="_blank"><i class="icofont-youtube-play"></i></a></li>
+                <li><a href="" target="_blank"><i class="icofont-instagram"></i></a></li>
+        </ul>
+</nav>
+<div class="overlay"></div>
+
+
+
+
+
+        
+
+<div class="hero-container">
+        <!--video-->
+        <div class="video-container hidden-sm hidden-xs">
+            <div class="scroll-more">
+                <div class='icon-scroll'></div>
+            </div>
+            <div class="mask"></div>
+            <div class="video-caption">
+                    <h1>World of Happiness </h1>
+                <p>LuLu Mall, Kochi - in its 5th year of operations is Kerala's most preferred shopping, food &amp; entertainment destination and one of India's largest malls.</p>
+                    <a class="more" href="" target="_self">Know More</a>
+
+            </div>
+            <video poster="" autoplay loop muted style="background:transparent url() no-repeat center center;">
+                <source src="media/lulu-vidoe-11.mp4" type="video/mp4">
+            </video>
+
+        </div>
+            <!--Video will be replaced with images slider for mobile-->
+            <div class="clear-all"></div>
+            <div class="mob-banner-slider hidden-lg hidden-md">
+                <div class="slick-container-wrap">
+                    <ul class="mobile-hero-slider">
+                            <li>
+                                
+
+                                    <div class="slider-caption">
+                                        <h1>World of Happiness!</h1>
+                                            <a href="" target="_self">Know More</a>
+                                    </div>
+
+                            <img src="media/lulumall-cochin.jpg?anchor=center&amp;mode=crop&amp;width=600&amp;height=400&amp;rnd=131890953850000000" class="img-responsive" alt="mobile">
+                                
+                            </li>
+                            <li>
+                                
+
+                                    <div class="slider-caption">
+                                        <h1>World of Shopping</h1>
+                                                                                <a href="/kochi/stores/" target="_self">See More</a>
+                                    </div>
+
+                                    <img src="media/shopping-at-lulu.jpg?anchor=center&amp;mode=crop&amp;width=600&amp;height=400&amp;rnd=131890954610000000" class="img-responsive" alt="mobile">
+                                
+                            </li>
+                            <li>
+                                
+
+                                    <div class="slider-caption">
+                                        <h1>World of Dining</h1>
+                                    <a href="" target="_self">See More</a>
+                                    </div>
+
+                                    <img src="media/dining-at-lulu.jpg?anchor=center&amp;mode=crop&amp;width=600&amp;height=400&amp;rnd=131890954740000000" class="img-responsive" alt="mobile">
+                                
+                            </li>
+                            <li>
+                                
+
+                                    <div class="slider-caption">
+                                        <h1>World of Entertainment</h1>
+                                    <a href="" target="_self">See More</a>
+                                    </div>
+
+                                    <img src="media/movies-at-lulu.jpg?anchor=center&amp;mode=crop&amp;width=600&amp;height=400&amp;rnd=131890954940000000" class="img-responsive" alt="mobile">
+                                
+                            </li>
+                    </ul>
+                </div>
+            </div>
+
+</div>
+
+<div class="clear-all"></div>
+
+<div class="shop--featured" data-aos="fade-up">
+    <div class="featured--captions">
+        <h2 data-aos="fade-up" data-aos-delay="100">Fashion <br /> Shopping</h2>
+        <p data-aos="fade-up" data-aos-delay="200">Shop for what you want like never before</p>
+        <a class="more" href="">View All Shops</a>
+    </div>
+    <img src="media/fashion-girl.jpg?anchor=center&amp;mode=crop&amp;width=470&amp;height=850&amp;rnd=131896863670000000" alt="Fashion" class="fashion--girl" />
+</div>
+<div class="dine--featured" data-aos="fade-up" data-aos-delay="100">
+    <div class="featured--captions">
+        <h2 data-aos="fade-up" data-aos-delay="300">Dine</h2>
+        <p data-aos="fade-up" data-aos-delay="400">Dining with a smile.</p>
+        <a class="more black" href="">View All Shops</a>
+    </div>
+    <img src="media/dine-food.jpg?crop=0,0,0,0&amp;cropmode=percentage&amp;width=486&amp;height=709&amp;rnd=131896863670000000" alt="Dine" class="dine-food" />
+</div>
+<div class="clear-all"></div>
+<div class="entertain--featured" data-aos="fade-up">
+    <div class="featured--captions">
+        <h2 data-aos="fade-up" data-aos-delay="100">Non-stop thrills. Full of fun.</h2>
+        <p data-aos="fade-up" data-aos-delay="200">Kerala's only ice skating rink, Gaming zone, 12 lane bowling alley, World-class 5D Cinema experience</p>
+        <a class="more black" href="">View All Shops</a>
+    </div>
+    <div class="skating" style="background-image:url(media/ice-skating.jpg?anchor=center&amp;mode=crop&amp;width=1600&amp;height=800&amp;rnd=131896863670000000)"></div>
+</div>
+<div class="clear-all"></div>
+<!--news event-->
+<div class="news-events">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Events & Offers</h3>
+                <a class="more black" href="">All Events</a>
+                <a class="more black" href="">All Offers</a>
+                <div class="clear-all"></div>
+                <div class="arrow-controls">
+                    <a class="slider-prev"><i class="icofont-arrow-left"></i></a>
+                    <a class="slider-next"><i class="icofont-arrow-right"></i></a>
+                </div>
+
+            </div>
+            <div class="col-sm-8">
+                <ul class="news-event-slider">
+
+                        <li>
+                            <a href="">
+
+                                <div class="thumb--image">
+                                        <img src="media/72_flower-fest-inauguration.jpg?anchor=center&amp;mode=crop&amp;width=400&amp;height=260&amp;rnd=131935630220000000" class="img-responsive" alt="LuLu Flower Fest 2019">
+
+
+                                </div>
+                                <div class="item--details">
+                                        <p class="date"><span class="day"> 14</span>Feb, 2019</p>
+                                    <span class="item-type">Event</span>
+                                    <h4>LuLu Flower Fest 2019</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+
+                                <div class="thumb--image">
+                                        <img src="media/70_republic-day-dance.jpg?anchor=center&amp;mode=crop&amp;width=400&amp;height=260&amp;rnd=131925372500000000" class="img-responsive" alt="Republic Day with Prince Dance Group">
+
+
+                                </div>
+                                <div class="item--details">
+                                        <p class="date"><span class="day"> 26</span>Jan, 2019</p>
+                                    <span class="item-type">Event</span>
+                                    <h4>Republic Day with Prince Dance Group</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+
+                                <div class="thumb--image">
+                                        <img src="media/71_sitarsonic.jpg?anchor=center&amp;mode=crop&amp;width=400&amp;height=260&amp;rnd=131931434320000000" class="img-responsive" alt="Sitarsonic ">
+
+
+                                </div>
+                                <div class="item--details">
+                                        <p class="date"><span class="day"> 26</span>Jan, 2019</p>
+                                    <span class="item-type">Event</span>
+                                    <h4>Sitarsonic</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/kochi/events/lulu-on-sale-2019/">
+
+                                <div class="thumb--image">
+                                        <img src="media/los.jpg?anchor=center&amp;mode=crop&amp;width=400&amp;height=260&amp;rnd=131908065220000000" class="img-responsive" alt="LuLu On Sale 2019">
+
+
+                                </div>
+                                <div class="item--details">
+                                        <p class="date"><span class="day"> 04</span>Jan, 2019</p>
+                                    <span class="item-type">Event</span>
+                                    <h4>LuLu On Sale 2019</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/kochi/events/christmas-2018/">
+
+                                <div class="thumb--image">
+                                        <img src="media/22_xmas-2018_640-x-460.jpg?anchor=center&amp;mode=crop&amp;width=400&amp;height=260&amp;rnd=131899551740000000" class="img-responsive" alt="Christmas 2018">
+
+
+                                </div>
+                                <div class="item--details">
+                                        <p class="date"><span class="day"> 20</span>Dec, 2018</p>
+                                    <span class="item-type">Event</span>
+                                    <h4>Christmas 2018</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/kochi/events/lulu-loyalty-upper-crust-club/">
+
+                                <div class="thumb--image">
+                                        <img src="media/29_lulu-upper-crust.jpg?anchor=center&amp;mode=crop&amp;width=400&amp;height=260&amp;rnd=131910626550000000" class="img-responsive" alt="LuLu Loyalty | Upper Crust Club">
+
+
+                                </div>
+                                <div class="item--details">
+                                        <p class="date"><span class="day"> 15</span>Dec, 2018</p>
+                                    <span class="item-type">Event</span>
+                                    <h4>LuLu Loyalty | Upper Crust Club</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+
+                                <div class="thumb--image">
+                                        <img src="media/24_lulu-football-challenge.jpg?anchor=center&amp;mode=crop&amp;width=400&amp;height=260&amp;rnd=131904584050000000" class="img-responsive" alt="LuLu Football Challenge Closing Ceremony">
+
+
+                                </div>
+                                <div class="item--details">
+                                        <p class="date"><span class="day"> 25</span>Nov, 2018</p>
+                                    <span class="item-type">Event</span>
+                                    <h4>LuLu Football Challenge Closing Ceremony</h4>
+                                </div>
+                            </a>
+                        </li>
+                                            <li>
+                              <a href="">
+
+                                <div class="thumb--image">
+                                        <img src="media/womens-wednesday_bipha-ayurveda.jpg?anchor=center&amp;mode=crop&amp;width=400&amp;height=260&amp;rnd=131896092080000000" class="img-responsive" alt="Women&#39;s Wednesday Bipha Ayurveda">
+
+
+                                </div>
+                                <div class="item--details">
+                                    <span class="item-type">Offer</span>
+                                    <h4>Women&#39;s Wednesday Bipha Ayurveda</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                              <a href="">
+
+                                <div class="thumb--image">
+                                        <img src="media/womens-wednesday_colorbar.jpg?anchor=center&amp;mode=crop&amp;width=400&amp;height=260&amp;rnd=131896094460000000" class="img-responsive" alt="Women&#39;s Wednesday Colorbar">
+
+
+                                </div>
+                                <div class="item--details">
+                                    <span class="item-type">Offer</span>
+                                    <h4>Women&#39;s Wednesday Colorbar</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                              <a href="">
+
+                                <div class="thumb--image">
+                                        <img src="media/tasty-tuesday-offers-1.jpg?anchor=center&amp;mode=crop&amp;width=400&amp;height=260&amp;rnd=131937400600000000" class="img-responsive" alt="Tasty Tuesday Offers">
+
+
+                                </div>
+                                <div class="item--details">
+                                    <span class="item-type">Offer</span>
+                                    <h4>Tasty Tuesday Offers</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                              <a href="">
+
+                                <div class="thumb--image">
+                                        <img src="media/tasty-tuesday-offers-2.jpg?anchor=center&amp;mode=crop&amp;width=400&amp;height=260&amp;rnd=131937402630000000" class="img-responsive" alt="Tasty Tuesday Offers">
+
+
+                                </div>
+                                <div class="item--details">
+                                    <span class="item-type">Offer</span>
+                                    <h4>Tasty Tuesday Offers</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                              <a href="">
+
+                                <div class="thumb--image">
+                                        <img src="media/tasty-tuesday-offers-4.jpg?anchor=center&amp;mode=crop&amp;width=400&amp;height=260&amp;rnd=131937407710000000" class="img-responsive" alt="Tasty Tuesday Offers">
+
+
+                                </div>
+                                <div class="item--details">
+                                    <span class="item-type">Offer</span>
+                                    <h4>Tasty Tuesday Offers</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                              <a href="">
+
+                                <div class="thumb--image">
+                                        <img src="media/tasty-tuesday-offers-3.jpg" class="img-responsive" alt="Tasty Tuesday Offers">
+
+
+                                </div>
+                                <div class="item--details">
+                                    <span class="item-type">Offer</span>
+                                    <h4>Tasty Tuesday Offers</h4>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                              <a href="">
+
+                                <div class="thumb--image">
+                                        <img src="media/tasty-tuesday-offers-5.jpg" class="img-responsive" alt="Tasty Tuesday Offers">
+
+
+                                </div>
+                                <div class="item--details">
+                                    <span class="item-type">Offer</span>
+                                    <h4>Tasty Tuesday Offers</h4>
+                                </div>
+                            </a>
+                        </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--pvr cinema-->
+
+<div class="clear-all"></div>
+<div class="movie--featured" data-aos="fade-up">
+    <div class="featured--captions">
+        <h2 data-aos="fade-up" data-aos-delay="100">Experience <br>PVR Cinemas</h2>
+        <p data-aos="fade-up" data-aos-delay="200">Where the Stars See the Films</p>
+        <a class="more" href="/kochi/movies/">Now Running Movies</a>
+    </div>
+    <div class="pvr" style="background-image:url('media/pvr-lulu.jpg')"></div>
+</div>
+<div class="clear-all"></div>
+
+
+
+
+
+
+        
+<!--section 8 / footer-->
+<footer>
+    <div class="greyed">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <h4>Follow us</h4>
+                        <ul class="social-links">
+                                <li><a href="" target="_blank"><i class="icofont-facebook"></i></a></li>
+                                <li><a href="" target="_blank"><i class="icofont-twitter"></i></a></li>
+                                <li><a href="" target="_blank"><i class="icofont-youtube-play"></i></a></li>
+                                <li><a href="" target="_blank"><i class="icofont-instagram"></i></a></li>
+                        </ul>
+
+                </div>
+<!--section 7 / newsletter-->
+
+
+<div class="col-md-5 col-sm-8 col-xs-12">
+    <h4>Be the first to know</h4>
+    <input class="form-control" type="hidden" id="newsletter-parent" value="4975">
+
+    <div class="newsletter-form" id="app">
+        <input class="form-control email-input"
+               placeholder="Email Address"
+               id="email"
+               name="email"
+               v-model="newsletter.email"
+               v-validate="'required|email'">
+        <span v-show="errors.has('email')" class="help is-danger error">{{ errors.first('email') }}</span>
+
+        <button id="signUp-btn"
+                v-on:click="onSubmitClick"
+                class="btn-main email-submit"
+                v-show="!processing">
+            Submit
+        </button>
+
+
+
+        <!-- enable this to show form submission msg's-->
+        <div class="submit-alerts">
+            <div class="alert alert-success" role="alert" v-if="showSuccessMessage">Submitted Successfully</div>
+            <div class="alert alert-danger" role="alert" v-if="showFailureMessage">Submission Failed. Please try again later</div>
+        </div>
+    </div>
+</div>               
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <h4>Download The App</h4>
+                    <ul class="app-links">
+                           <li><a href="" target="_blank"><img src="media/badge_android@2x.png" alt="Andriod" /> </a></li>
+
+                            <li><a href="" target="_blank"><img src="media/badge_ios@2x.png" alt="IOS" /> </a></li> 
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot-navs">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-xs-12">
+
+                    <h5>The Mall</h5>
+                        <ul class="the-mall">
+                                <li><a href="">About Mall</a> </li>
+                                <li><a href="">Offers</a> </li>
+                                <li><a href="">Shop</a> </li>
+                               
+                                <li><a href="">Events</a> </li>
+                                <li><a href="">Services</a> </li>
+                                <li><a href="">Leasing Enquiry</a> </li>
+                                <li><a href="">Dine</a> </li>
+                                <li><a href="">News</a> </li>
+                                <li><a href="">Contact Us</a> </li>
+                                <li><a href="">Movies</a> </li>
+                                <li><a href="">Careers</a> </li>
+                        </ul>
+
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <h5>Connect with us</h5>
+                    <ul>
+                            <li>
+                                Call -
+                                <a href="tel:">+91 123456789
+                                </a>
+                            </li>
+                            <li>
+                                Call -
+                                <a href="tel:">+91 123456789
+                                </a>
+                            </li>
+                            <li>
+                                Call -
+                                <a href="tel:">+91 123456789
+                                </a>
+                            </li>
+
+                        <li>Email -<a href=""> Mail us </a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <h5>Find us</h5>
+                    <ul>
+                        <li> Shopping Mall </li>
+<li>123456789,</li>
+<li>HYDERABAD 5000037, </li>
+<li>HYD</li>
+                       
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="legal--copyrights">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <p>Copyright &copy; 2019 . All Rights Reserved.</p>
+
+                    
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                        <ul>
+                                <li><a href="">Privacy Policy &amp; Terms and Condition</a> </li>
+                                <li><a href="" target="_blank"></a> </li>
+                        </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <a id="return-to-top" class="go-up"><i class="icofont-long-arrow-up"></i></a>
+
+</footer>
+
+    </div>
+    <!--scripts-->
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/aos.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/common.js"></script>
+
+    
+    <script src="js/jquery.validate-vsdoc.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.validate.unobtrusive.min.js"></script>
+    <script src="js/newsletterApp.js"></script>
+    <!--scroll animations-->
+    <script src="js/aos.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/intlTelInput.js"></script>
+    <script src="js/utils.js"></script>
+
+
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39127772-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-39127772-1');
+    </script>
+    <script>
+        $(document).ready(function () {
+            createCookie('website', "/kochi/", 1);
+        });
+    </script>
+    
+    <script>
+        $(function () {
+            $(".sp-notifications").slick({
+                dots: false,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true
+            });
+        });
+        //auto hide notifications
+        $(function () {
+            setTimeout(function () {
+                $(".notification").fadeOut(1000);
+            }, 12000);
+        });
+    </script>
+
+    <script>
+        function searchResult(event) {
+            window.parent.location = '/kochi/search/' + document.getElementById("searchInput").value;
+        }
+        $('#searchInput').on('click', function (e) {
+            e.stopPropagation();
+        });
+    </script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#searchInput").autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: "/Umbraco/Api/AutoSuggest/GetSuggestions",
+                        type: "GET",
+                        dataType: "json",
+                        data: { Prefix: request.term, Id:'1829' },
+                        success: function (data) {
+                            response($.map(data, function (item) {
+                                return item;
+                            }))
+
+                        }
+                    })
+                },
+                messages: {
+                    noResults: "",
+                    results: function (count) {
+                        return count + (count > 1 ? ' results' : ' result ') + ' found';
+                    }
+                }
+            });
+        })
+    </script>
+</body>
+</html>
